@@ -7,23 +7,21 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Inherit from TECNO-BF7 device
-$(call inherit-product, device/tecno/TECNO-BF7/device.mk)
+# Inherit some common twrp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
-PRODUCT_DEVICE := TECNO-BF7
-PRODUCT_NAME := omni_TECNO-BF7
-PRODUCT_BRAND := TECNO
-PRODUCT_MODEL := TECNO BF7
+# Inherit from BE7 device
+$(call inherit-product, device/tecno/BE7/device.mk)
+
+PRODUCT_DEVICE := BF7
+PRODUCT_NAME := twrp_BF7
+PRODUCT_BRAND := TECNO COMMUNICATION
+PRODUCT_MODEL := TECNO pop 7 pro
 PRODUCT_MANUFACTURER := tecno
 
 PRODUCT_GMS_CLIENTID_BASE := android-tecno
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="vnd_bf7_h6127-user 12 SP1A.210812.016 605190 release-keys"
-
-BUILD_FINGERPRINT := TECNO/BF7-GL/TECNO-BF7:12/SP1A.210812.016/240510V1777:user/release-keys
