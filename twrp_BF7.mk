@@ -15,8 +15,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from BE7 device
-$(call inherit-product, device/tecno/BE7/device.mk)
+# Inherit from BF7 device
+$(call inherit-product, device/tecno/BF7/device.mk)
 
 PRODUCT_DEVICE := BF7
 PRODUCT_NAME := twrp_BF7
