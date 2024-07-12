@@ -52,12 +52,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     bootctrl.mt6761
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.mt6761 \
-    libgptutils \
-    libz \
-    libcutils
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
