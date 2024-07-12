@@ -20,7 +20,7 @@ $(call inherit-product, device/tecno/BF7/device.mk)
 
 PRODUCT_DEVICE := BF7
 PRODUCT_NAME := twrp_BF7
-PRODUCT_BRAND := TECNO COMMUNICATION
+PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO pop 7 pro
 PRODUCT_MANUFACTURER := tecno
 
