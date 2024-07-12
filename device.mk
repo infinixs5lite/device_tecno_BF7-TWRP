@@ -41,10 +41,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl 
 
-PRODUCT_PACKAGES += \
-    bootctrl.mt6768 \
-    bootctrl.mt6768.recovery
-
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -64,11 +60,9 @@ PRODUCT_PACKAGES += \
 
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libkeymaster4 \
     libkeymaster41 \
     libpuresoftkeymasterdevice
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
