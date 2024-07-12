@@ -100,9 +100,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2021-08-01
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_VBMETA_SYSTEM := system product
@@ -140,22 +137,19 @@ TW_EXCLUDE_APEX := true
 TW_DEVICE_VERSION := NINO
 TW_EXCLUDE_NANO_EDITOR := true
 TW_EXCLUDE_NANO := true
-TW_EXCLUDE_TWRPAPP := true
 TW_THEME := portrait_hdpi
+TW_EXCLUDE_NANO := true
+TW_EXCLUDE_TWRPAPP := true
+TW_EXCLUDE_PYTHON := true
+TW_DEFAULT_LANGUAGE := en-US
+TW_EXCLUDE_MTP := true
+TW_EXCLUDE_SUPERSU := true
+TW_NO_REBOOT_BOOTLOADER := true
 
 # Brightness Screen
-TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2000
 TW_DEFAULT_BRIGHTNESS := 1200
-
-# USB Configuration
-TW_EXCLUDE_DEFAULT_USB_INIT := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
-TW_HAS_MTP := true
-
-# USB OTG
-TW_USB_STORAGE := true
 
 # LOGCAT
 TARGET_USES_LOGD := false   
